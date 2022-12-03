@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Biswaranjan.Assignment</title>
+    </head>
+   
+   
+   
+    <style>
+     
+        form{
+            background-color: rgb(76, 139, 199);
+            
+            width: 50vw;
+            border-radius: 10px;
+            padding: 5px;
+           
+        }
+        .card_one{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          padding-top: 40px;
+        }
+     
+       
+        h1{
+            text-align: center;
+        }
+        .ab{
+          margin-top:10px;
+          height:30px ;
+          width: 150px;
+        }
+        .abcd{
+          padding-right: 40px;
+          margin-right: 30px;
+        }
+        .first{
+            margin-left: 20px;
+            height: 30px;
+            width: 80%;
+        }
+        .sec{
+            margin-left: 15px;
+        }
+        .firstbox{
+            margin-bottom: 20px;
+        }
+      
+        .card{
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           padding-top: 10px;
+        }
+
+        .ab{
+            display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+        button{
+            height: 40px;
+            width: 90px;
+            
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            border-width: 0px;
+
+        }
+    </style>
+    <body>
+        <div class="card">
+
+        
+        <form method="post" action="biswa" onsubmit="validphonenumber()">
+            <h1>Form Page</h1>
+            <h2>Title*</h2>
+            <div class="firstbox ">
+                <input class="first" type="text" id="first" name=" title" placeholder="Write Title here" required>
+                
+            </div>
+            <h2>Name*</h2>
+            <div class="firstbox">
+                <input class="first" type="text" id="second" name="name" placeholder="write your name" required>
+            </div>
+            
+            
+            <h2>Email*</h2>
+            <div class="firstbox">
+                <input class="first" type="email" id="third" name="email" placeholder="write your email" required>
+            </div>
+            <h2>Phone*</h2>
+            <div class="firstbox">
+                <input class="first" type="number" id="four" name="phone" placeholder="+91 ##-####-####" required>
+            </div>
+            <h2>Address</h2>
+            <div class="firstbox">
+                <input class="first" type="text" id="five" name="addres" placeholder="Write your  addres">
+            </div>
+            <h2>Appointment Date*</h2>
+            <div class="firstbox">
+                <input class="first" type="date" id="six" name="date" min="2022-12-03" required>
+            </div>
+            <h2>Appointment Time*</h2>
+            <div class="firstbox">
+                <input class="first" type="time" id="seven" name="time"  required>
+            </div>
+            <h2>Services*</h2>
+            <div class="firstbox">
+                
+                <select class="ab" name="Services" id="eight" required>
+                  <option value="abcd" >Confinement</option>
+                  <option value=" cder">treatments</option>
+                  <option value="vbnm"> procedures</option>
+                  <option value=" cder">tests</option>
+                  <option value="vbnm"> examination</option>
+                  <option value="hcdbd">Comment</option>
+                </select>
+              </div>
+              <div  style="text-align:center ; " >
+                
+                  <input  type="submit" style=" height: 40px;width: 90px;background-color: black;border-radius: 5px;color: white;" value="Submit">
+                
+              </div>
+             
+            
+        </form>
+        
+
+    </div>
+    <script>
+      function validphonenumber(){
+        var mobiletxt = document.getElementById("four").value;
+        var mobileexp = /^\d{10}$/;
+        if(mobiletxt.match(mobileexp)){
+            return true
+        }
+        else{
+            alert("invalid mobile number")
+            return false
+        }
+      }
+       
+    </script>
+    </body>
+   
+</html>
